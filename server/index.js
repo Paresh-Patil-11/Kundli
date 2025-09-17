@@ -12,6 +12,8 @@ const horoscopeRoutes = require("./routes/horoscopes");
 const blogRoutes = require("./routes/blogs");
 const contactRoutes = require("./routes/contact");
 const zodiacRoutes = require("./routes/zodiac");
+const appointmentRoutes = require("./routes/appointments");
+const rashiRoutes = require("./routes/rashi");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -46,6 +48,8 @@ app.use("/api/horoscopes", horoscopeRoutes);
 app.use("/api/blogs", blogRoutes);
 app.use("/api/contact", contactRoutes);
 app.use("/api/zodiac", zodiacRoutes);
+app.use("/api/appointments", appointmentRoutes);
+app.use("/api/rashi", rashiRoutes);
 
 // Health check endpoint
 app.get("/api/health", (req, res) => {

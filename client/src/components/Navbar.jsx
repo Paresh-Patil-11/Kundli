@@ -70,6 +70,7 @@ const Navbar = () => {
     { text: 'Moon Phases', path: '/moon-phases', icon: <NightsStay /> },
     { text: 'Tarot Reading', path: '/tarot', icon: <Style /> },
     { text: 'Lucky Numbers', path: '/lucky-numbers', icon: <Casino /> },
+    { text: 'Appointments', path: '/appointments', icon: <ContactMail /> },
     { text: 'Blog', path: '/blog', icon: <Article /> },
     { text: 'Contact', path: '/contact', icon: <ContactMail /> },
   ];
@@ -133,13 +134,17 @@ const Navbar = () => {
               flexGrow: 1,
               textDecoration: 'none',
               color: 'inherit',
-              background: 'linear-gradient(45deg, #6366f1, #ec4899)',
+              background: 'linear-gradient(45deg, #FFD700, #FFD369)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               fontWeight: 700,
+              fontSize: '1.8rem',
+              fontFamily: '"Cinzel", serif',
+              textShadow: '0 0 20px rgba(255, 215, 0, 0.5)',
+              filter: 'drop-shadow(0 0 10px #FFD700)',
             }}
           >
-            KundliVision
+            🔮 KundliVision
           </Typography>
 
           {!isMobile && (
@@ -153,7 +158,9 @@ const Navbar = () => {
                   sx={{
                     color: location.pathname === item.path ? 'primary.main' : 'inherit',
                     '&:hover': {
-                      backgroundColor: 'rgba(99, 102, 241, 0.1)',
+                      backgroundColor: 'rgba(255, 215, 0, 0.1)',
+                      color: '#FFD700',
+                      textShadow: '0 0 10px rgba(255, 215, 0, 0.5)',
                     },
                   }}
                 >
